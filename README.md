@@ -2,45 +2,38 @@
 
 **GARAMA XZ TEAM**
 
-Plataforma web de herramientas de búsqueda de perfiles públicos de redes sociales.
+Suite de herramientas sociales con diseño futurista negro y rojo.
 
-## Características
+## Herramientas disponibles
 
-- Diseño futurista oscuro (negro + rojo neón + glassmorphism)
-- Instagram Account Lookup (UI completa)
-- TikTok Account Lookup (UI completa)
-- Social Search (búsqueda cruzada de perfiles)
-- Interfaz responsive
-- Animaciones, toasts y estados de carga
+| Herramienta | Estado | Descripción |
+|-------------|--------|-------------|
+| Instagram Lookup | UI Ready | Interfaz lista + enlace directo al perfil |
+| TikTok Lookup | UI Ready | Interfaz lista + enlace directo al perfil |
+| IG Profile Analyzer | Ready | Preparado para Instagram Graph API oficial |
+| TT Profile Analyzer | Ready | Preparado para Display / Research API de TikTok |
+| Username Checker | **Funcional** | Valida formato y genera enlaces de comprobación |
+| Link Analyzer | **Funcional** | Analiza enlaces de Instagram y TikTok localmente |
+| Social Search | **Funcional** | Genera enlaces directos a perfiles |
+| Message Center | Prep | Preparado para Messaging APIs oficiales |
 
-## Limitaciones importantes
+## Funciones reales actuales
 
-GitHub Pages solo permite sitios estáticos.  
-Instagram y TikTok **no ofrecen APIs públicas gratuitas** para consultar perfiles arbitrarios desde el navegador.
+- **Username Checker**: valida formato de username y genera enlaces de comprobación.
+- **Link Analyzer**: parsea URLs de Instagram (perfil, post, reel) y TikTok (perfil, vídeo) completamente en el navegador.
+- **Social Search**: genera accesos directos a perfiles públicos.
 
-Por este motivo, las herramientas de lookup muestran la interfaz completa y generan enlaces directos a los perfiles, pero **no pueden obtener datos reales** (seguidores, biografía, etc.) sin un backend + API oficial o servicio autorizado.
+## Preparado para el futuro
 
-## Publicación (GitHub Pages)
+La arquitectura está lista para conectar un backend con **Cloudflare Workers** + APIs oficiales de Meta y TikTok cuando se disponga de las credenciales y permisos correspondientes.
 
-1. Ve a **Settings → Pages** del repositorio
-2. Source: Branch `main` → Folder `/ (root)`
-3. Pulsa **Save**
+## Publicación
 
-La página estará disponible en:  
-**https://rachelrayan2030-byte.github.io/garama-helper/**
+1. Ve a **Settings → Pages**
+2. Source: `main` / `/ (root)`
+3. Save
 
-## Estructura
-
-```
-garama-helper/
-├── index.html
-├── README.md
-└── assets/
-    ├── css/
-    │   └── style.css
-    └── js/
-        └── app.js
-```
+URL: **https://rachelrayan2030-byte.github.io/garama-helper/**
 
 ## Créditos
 
