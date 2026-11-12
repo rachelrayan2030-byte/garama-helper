@@ -37,9 +37,29 @@
                     <i data-lucide="music-2"></i>
                     <span>TikTok Lookup</span>
                 </a>
+                <a href="#" class="nav-item" data-section="ig-analyzer">
+                    <i data-lucide="bar-chart-3"></i>
+                    <span>IG Profile Analyzer</span>
+                </a>
+                <a href="#" class="nav-item" data-section="tt-analyzer">
+                    <i data-lucide="activity"></i>
+                    <span>TT Profile Analyzer</span>
+                </a>
+                <a href="#" class="nav-item" data-section="username">
+                    <i data-lucide="user-check"></i>
+                    <span>Username Checker</span>
+                </a>
+                <a href="#" class="nav-item" data-section="link">
+                    <i data-lucide="link-2"></i>
+                    <span>Link Analyzer</span>
+                </a>
                 <a href="#" class="nav-item" data-section="search">
                     <i data-lucide="search"></i>
                     <span>Social Search</span>
+                </a>
+                <a href="#" class="nav-item" data-section="messages">
+                    <i data-lucide="message-square"></i>
+                    <span>Message Center</span>
                 </a>
             </nav>
 
@@ -71,155 +91,251 @@
                 <section id="dashboard" class="section active">
                     <div class="section-header">
                         <h1>Dashboard</h1>
-                        <p>Herramientas de búsqueda de perfiles públicos</p>
+                        <p>Suite de herramientas sociales · GARAMA XZ TEAM</p>
                     </div>
 
                     <div class="tools-grid">
                         <div class="tool-card" data-goto="instagram">
-                            <div class="tool-icon instagram">
-                                <i data-lucide="instagram"></i>
-                            </div>
+                            <div class="tool-icon instagram"><i data-lucide="instagram"></i></div>
                             <h3>Instagram Lookup</h3>
-                            <p>Consulta información pública de cuentas de Instagram</p>
-                            <div class="tool-status">
-                                <span class="badge">Disponible</span>
-                            </div>
+                            <p>Consulta de perfiles públicos de Instagram</p>
+                            <div class="tool-status"><span class="badge">UI Ready</span></div>
                         </div>
-
                         <div class="tool-card" data-goto="tiktok">
-                            <div class="tool-icon tiktok">
-                                <i data-lucide="music-2"></i>
-                            </div>
+                            <div class="tool-icon tiktok"><i data-lucide="music-2"></i></div>
                             <h3>TikTok Lookup</h3>
-                            <p>Obtén datos públicos de perfiles de TikTok</p>
-                            <div class="tool-status">
-                                <span class="badge">Disponible</span>
-                            </div>
+                            <p>Consulta de perfiles públicos de TikTok</p>
+                            <div class="tool-status"><span class="badge">UI Ready</span></div>
                         </div>
-
+                        <div class="tool-card" data-goto="ig-analyzer">
+                            <div class="tool-icon instagram"><i data-lucide="bar-chart-3"></i></div>
+                            <h3>IG Profile Analyzer</h3>
+                            <p>Análisis de perfiles con autorización</p>
+                            <div class="tool-status"><span class="badge">Ready</span></div>
+                        </div>
+                        <div class="tool-card" data-goto="tt-analyzer">
+                            <div class="tool-icon tiktok"><i data-lucide="activity"></i></div>
+                            <h3>TT Profile Analyzer</h3>
+                            <p>Análisis de contenido público accesible</p>
+                            <div class="tool-status"><span class="badge">Ready</span></div>
+                        </div>
+                        <div class="tool-card" data-goto="username">
+                            <div class="tool-icon search"><i data-lucide="user-check"></i></div>
+                            <h3>Username Checker</h3>
+                            <p>Comprueba disponibilidad de nombres de usuario</p>
+                            <div class="tool-status"><span class="badge">Ready</span></div>
+                        </div>
+                        <div class="tool-card" data-goto="link">
+                            <div class="tool-icon search"><i data-lucide="link-2"></i></div>
+                            <h3>Link Analyzer</h3>
+                            <p>Analiza enlaces de Instagram y TikTok</p>
+                            <div class="tool-status"><span class="badge">Ready</span></div>
+                        </div>
                         <div class="tool-card" data-goto="search">
-                            <div class="tool-icon search">
-                                <i data-lucide="search"></i>
-                            </div>
+                            <div class="tool-icon search"><i data-lucide="search"></i></div>
                             <h3>Social Search</h3>
-                            <p>Búsqueda cruzada de perfiles en redes sociales</p>
-                            <div class="tool-status">
-                                <span class="badge">Disponible</span>
-                            </div>
+                            <p>Búsqueda cruzada de perfiles</p>
+                            <div class="tool-status"><span class="badge">Ready</span></div>
+                        </div>
+                        <div class="tool-card" data-goto="messages">
+                            <div class="tool-icon search"><i data-lucide="message-square"></i></div>
+                            <h3>Message Center</h3>
+                            <p>Centro de mensajería (preparado)</p>
+                            <div class="tool-status"><span class="badge">Prep</span></div>
                         </div>
                     </div>
 
                     <div class="info-box">
                         <i data-lucide="info"></i>
                         <div>
-                            <strong>Nota importante</strong>
-                            <p>Estas herramientas están diseñadas para consultar únicamente información pública disponible. No se accede a cuentas privadas ni se utilizan métodos no autorizados.</p>
+                            <strong>Estado de integraciones</strong>
+                            <p>Las herramientas de lookup están preparadas para conectar con APIs oficiales mediante Cloudflare Workers. Actualmente funcionan con análisis local de enlaces, validación de usernames y generación de accesos directos a perfiles públicos.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Instagram Section -->
+                <!-- Instagram Lookup -->
                 <section id="instagram" class="section">
                     <div class="section-header">
                         <h1>Instagram Account Lookup</h1>
                         <p>Consulta información pública de un perfil de Instagram</p>
                     </div>
-
                     <div class="lookup-panel">
                         <div class="search-form">
                             <div class="input-group">
                                 <i data-lucide="at-sign"></i>
                                 <input type="text" id="igUsername" placeholder="nombredeusuario" autocomplete="off">
                             </div>
-                            <button class="btn-primary" id="igSearchBtn">
-                                <i data-lucide="search"></i>
-                                <span>SEARCH</span>
-                            </button>
+                            <button class="btn-primary" id="igSearchBtn"><i data-lucide="search"></i><span>SEARCH</span></button>
                         </div>
-
-                        <div id="igResults" class="results-area hidden">
-                            <!-- Results injected by JS -->
-                        </div>
-
+                        <div id="igResults" class="results-area hidden"></div>
                         <div id="igEmpty" class="empty-state">
                             <i data-lucide="instagram"></i>
                             <h3>Busca un perfil de Instagram</h3>
                             <p>Introduce un nombre de usuario para consultar su información pública</p>
                         </div>
-
-                        <div id="igLoading" class="loading-state hidden">
-                            <div class="spinner"></div>
-                            <p>Consultando perfil...</p>
-                        </div>
+                        <div id="igLoading" class="loading-state hidden"><div class="spinner"></div><p>Consultando perfil...</p></div>
                     </div>
                 </section>
 
-                <!-- TikTok Section -->
+                <!-- TikTok Lookup -->
                 <section id="tiktok" class="section">
                     <div class="section-header">
                         <h1>TikTok Account Lookup</h1>
                         <p>Consulta información pública de un perfil de TikTok</p>
                     </div>
-
                     <div class="lookup-panel">
                         <div class="search-form">
                             <div class="input-group">
                                 <i data-lucide="at-sign"></i>
                                 <input type="text" id="ttUsername" placeholder="nombredeusuario" autocomplete="off">
                             </div>
-                            <button class="btn-primary" id="ttSearchBtn">
-                                <i data-lucide="search"></i>
-                                <span>SEARCH</span>
-                            </button>
+                            <button class="btn-primary" id="ttSearchBtn"><i data-lucide="search"></i><span>SEARCH</span></button>
                         </div>
-
-                        <div id="ttResults" class="results-area hidden">
-                            <!-- Results injected by JS -->
-                        </div>
-
+                        <div id="ttResults" class="results-area hidden"></div>
                         <div id="ttEmpty" class="empty-state">
                             <i data-lucide="music-2"></i>
                             <h3>Busca un perfil de TikTok</h3>
                             <p>Introduce un nombre de usuario para consultar su información pública</p>
                         </div>
+                        <div id="ttLoading" class="loading-state hidden"><div class="spinner"></div><p>Consultando perfil...</p></div>
+                    </div>
+                </section>
 
-                        <div id="ttLoading" class="loading-state hidden">
-                            <div class="spinner"></div>
-                            <p>Consultando perfil...</p>
+                <!-- IG Profile Analyzer -->
+                <section id="ig-analyzer" class="section">
+                    <div class="section-header">
+                        <h1>Instagram Profile Analyzer</h1>
+                        <p>Análisis de perfiles para los que tengas autorización o datos públicos accesibles</p>
+                    </div>
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="at-sign"></i>
+                                <input type="text" id="igAnalyzerUser" placeholder="usuario autorizado o público" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="igAnalyzerBtn"><i data-lucide="bar-chart-3"></i><span>ANALIZAR</span></button>
+                        </div>
+                        <div id="igAnalyzerResults" class="results-area hidden"></div>
+                        <div id="igAnalyzerEmpty" class="empty-state">
+                            <i data-lucide="bar-chart-3"></i>
+                            <h3>Analizador de perfiles Instagram</h3>
+                            <p>Esta herramienta está preparada para conectar con la Instagram Graph API oficial cuando dispongas de permisos de Business/Creator.</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- Social Search Section -->
+                <!-- TT Profile Analyzer -->
+                <section id="tt-analyzer" class="section">
+                    <div class="section-header">
+                        <h1>TikTok Profile Analyzer</h1>
+                        <p>Análisis de perfiles y contenido público accesible</p>
+                    </div>
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="at-sign"></i>
+                                <input type="text" id="ttAnalyzerUser" placeholder="usuario de TikTok" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="ttAnalyzerBtn"><i data-lucide="activity"></i><span>ANALIZAR</span></button>
+                        </div>
+                        <div id="ttAnalyzerResults" class="results-area hidden"></div>
+                        <div id="ttAnalyzerEmpty" class="empty-state">
+                            <i data-lucide="activity"></i>
+                            <h3>Analizador de perfiles TikTok</h3>
+                            <p>Preparada para la Display API / Research API oficial de TikTok cuando se disponga de autorización.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Username Checker -->
+                <section id="username" class="section">
+                    <div class="section-header">
+                        <h1>Username Checker</h1>
+                        <p>Comprueba la validez y posibles enlaces de nombres de usuario</p>
+                    </div>
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="usernameInput" placeholder="nombredeusuario" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="usernameBtn"><i data-lucide="user-check"></i><span>COMPROBAR</span></button>
+                        </div>
+                        <div id="usernameResults" class="results-area hidden"></div>
+                        <div id="usernameEmpty" class="empty-state">
+                            <i data-lucide="user-check"></i>
+                            <h3>Comprueba un username</h3>
+                            <p>Valida formato y genera enlaces directos a Instagram y TikTok</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Link Analyzer -->
+                <section id="link" class="section">
+                    <div class="section-header">
+                        <h1>Link Analyzer</h1>
+                        <p>Analiza enlaces de Instagram y TikTok</p>
+                    </div>
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="link"></i>
+                                <input type="text" id="linkInput" placeholder="Pega aquí un enlace de Instagram o TikTok" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="linkBtn"><i data-lucide="scan"></i><span>ANALIZAR</span></button>
+                        </div>
+                        <div id="linkResults" class="results-area hidden"></div>
+                        <div id="linkEmpty" class="empty-state">
+                            <i data-lucide="link-2"></i>
+                            <h3>Analizador de enlaces</h3>
+                            <p>Pega un enlace de perfil, post, reel o vídeo para extraer información</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Social Search -->
                 <section id="search" class="section">
                     <div class="section-header">
                         <h1>Social Search</h1>
                         <p>Búsqueda de perfiles públicos en Instagram y TikTok</p>
                     </div>
-
                     <div class="lookup-panel">
                         <div class="search-form">
                             <div class="input-group">
                                 <i data-lucide="search"></i>
                                 <input type="text" id="socialQuery" placeholder="Usuario o nombre..." autocomplete="off">
                             </div>
-                            <button class="btn-primary" id="socialSearchBtn">
-                                <i data-lucide="search"></i>
-                                <span>BUSCAR</span>
-                            </button>
+                            <button class="btn-primary" id="socialSearchBtn"><i data-lucide="search"></i><span>BUSCAR</span></button>
                         </div>
-
                         <div id="socialResults" class="results-area hidden"></div>
-
                         <div id="socialEmpty" class="empty-state">
                             <i data-lucide="users"></i>
                             <h3>Búsqueda social</h3>
-                            <p>Busca perfiles públicos por nombre de usuario o nombre público</p>
+                            <p>Busca perfiles públicos por nombre de usuario</p>
                         </div>
+                        <div id="socialLoading" class="loading-state hidden"><div class="spinner"></div><p>Buscando perfiles...</p></div>
+                    </div>
+                </section>
 
-                        <div id="socialLoading" class="loading-state hidden">
-                            <div class="spinner"></div>
-                            <p>Buscando perfiles...</p>
+                <!-- Message Center -->
+                <section id="messages" class="section">
+                    <div class="section-header">
+                        <h1>Message Center</h1>
+                        <p>Centro de mensajería preparado para integraciones oficiales</p>
+                    </div>
+                    <div class="lookup-panel">
+                        <div class="empty-state" style="padding:80px 20px">
+                            <i data-lucide="message-square"></i>
+                            <h3>Message Center</h3>
+                            <p style="max-width:480px;margin:0 auto 24px">Esta sección está preparada para conectar con las APIs oficiales de mensajería de Instagram (Messaging API) y TikTok cuando se disponga de las autorizaciones correspondientes.</p>
+                            <div class="notice-box" style="text-align:left;max-width:500px;margin:0 auto">
+                                <strong>Estado actual</strong><br><br>
+                                • Instagram Messaging API → requiere app de Meta revisada<br>
+                                • TikTok Messaging → requiere aprobación de desarrollador<br>
+                                • Cloudflare Workers listo para actuar como backend seguro<br><br>
+                                Cuando tengas las credenciales oficiales se podrá activar el flujo real.
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -227,9 +343,7 @@
         </main>
     </div>
 
-    <!-- Toast container -->
     <div id="toastContainer" class="toast-container"></div>
-
     <script src="assets/js/app.js"></script>
 </body>
 </html>
