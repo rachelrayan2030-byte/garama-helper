@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARAMA HELPER | Social Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">G</div>
+                    <div class="logo-text">
+                        <span class="logo-main">GARAMA</span>
+                        <span class="logo-sub">HELPER</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="dashboard">
+                    <i data-lucide="layout-dashboard"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" data-section="instagram">
+                    <i data-lucide="instagram"></i>
+                    <span>Instagram Lookup</span>
+                </a>
+                <a href="#" class="nav-item" data-section="tiktok">
+                    <i data-lucide="music-2"></i>
+                    <span>TikTok Lookup</span>
+                </a>
+                <a href="#" class="nav-item" data-section="search">
+                    <i data-lucide="search"></i>
+                    <span>Social Search</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="team-badge">GARAMA XZ TEAM</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <header class="topbar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i data-lucide="menu"></i>
+                </button>
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Buscar herramientas..." id="globalSearch">
+                </div>
+                <div class="topbar-right">
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span>Online</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="content">
+                <!-- Dashboard -->
+                <section id="dashboard" class="section active">
+                    <div class="section-header">
+                        <h1>Dashboard</h1>
+                        <p>Herramientas de búsqueda de perfiles públicos</p>
+                    </div>
+
+                    <div class="tools-grid">
+                        <div class="tool-card" data-goto="instagram">
+                            <div class="tool-icon instagram">
+                                <i data-lucide="instagram"></i>
+                            </div>
+                            <h3>Instagram Lookup</h3>
+                            <p>Consulta información pública de cuentas de Instagram</p>
+                            <div class="tool-status">
+                                <span class="badge">Disponible</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-card" data-goto="tiktok">
+                            <div class="tool-icon tiktok">
+                                <i data-lucide="music-2"></i>
+                            </div>
+                            <h3>TikTok Lookup</h3>
+                            <p>Obtén datos públicos de perfiles de TikTok</p>
+                            <div class="tool-status">
+                                <span class="badge">Disponible</span>
+                            </div>
+                        </div>
+
+                        <div class="tool-card" data-goto="search">
+                            <div class="tool-icon search">
+                                <i data-lucide="search"></i>
+                            </div>
+                            <h3>Social Search</h3>
+                            <p>Búsqueda cruzada de perfiles en redes sociales</p>
+                            <div class="tool-status">
+                                <span class="badge">Disponible</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <i data-lucide="info"></i>
+                        <div>
+                            <strong>Nota importante</strong>
+                            <p>Estas herramientas están diseñadas para consultar únicamente información pública disponible. No se accede a cuentas privadas ni se utilizan métodos no autorizados.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Instagram Section -->
+                <section id="instagram" class="section">
+                    <div class="section-header">
+                        <h1>Instagram Account Lookup</h1>
+                        <p>Consulta información pública de un perfil de Instagram</p>
+                    </div>
+
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="at-sign"></i>
+                                <input type="text" id="igUsername" placeholder="nombredeusuario" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="igSearchBtn">
+                                <i data-lucide="search"></i>
+                                <span>SEARCH</span>
+                            </button>
+                        </div>
+
+                        <div id="igResults" class="results-area hidden">
+                            <!-- Results injected by JS -->
+                        </div>
+
+                        <div id="igEmpty" class="empty-state">
+                            <i data-lucide="instagram"></i>
+                            <h3>Busca un perfil de Instagram</h3>
+                            <p>Introduce un nombre de usuario para consultar su información pública</p>
+                        </div>
+
+                        <div id="igLoading" class="loading-state hidden">
+                            <div class="spinner"></div>
+                            <p>Consultando perfil...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TikTok Section -->
+                <section id="tiktok" class="section">
+                    <div class="section-header">
+                        <h1>TikTok Account Lookup</h1>
+                        <p>Consulta información pública de un perfil de TikTok</p>
+                    </div>
+
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="at-sign"></i>
+                                <input type="text" id="ttUsername" placeholder="nombredeusuario" autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="ttSearchBtn">
+                                <i data-lucide="search"></i>
+                                <span>SEARCH</span>
+                            </button>
+                        </div>
+
+                        <div id="ttResults" class="results-area hidden">
+                            <!-- Results injected by JS -->
+                        </div>
+
+                        <div id="ttEmpty" class="empty-state">
+                            <i data-lucide="music-2"></i>
+                            <h3>Busca un perfil de TikTok</h3>
+                            <p>Introduce un nombre de usuario para consultar su información pública</p>
+                        </div>
+
+                        <div id="ttLoading" class="loading-state hidden">
+                            <div class="spinner"></div>
+                            <p>Consultando perfil...</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Social Search Section -->
+                <section id="search" class="section">
+                    <div class="section-header">
+                        <h1>Social Search</h1>
+                        <p>Búsqueda de perfiles públicos en Instagram y TikTok</p>
+                    </div>
+
+                    <div class="lookup-panel">
+                        <div class="search-form">
+                            <div class="input-group">
+                                <i data-lucide="search"></i>
+                                <input type="text" id="socialQuery" placeholder="Usuario o nombre..." autocomplete="off">
+                            </div>
+                            <button class="btn-primary" id="socialSearchBtn">
+                                <i data-lucide="search"></i>
+                                <span>BUSCAR</span>
+                            </button>
+                        </div>
+
+                        <div id="socialResults" class="results-area hidden"></div>
+
+                        <div id="socialEmpty" class="empty-state">
+                            <i data-lucide="users"></i>
+                            <h3>Búsqueda social</h3>
+                            <p>Busca perfiles públicos por nombre de usuario o nombre público</p>
+                        </div>
+
+                        <div id="socialLoading" class="loading-state hidden">
+                            <div class="spinner"></div>
+                            <p>Buscando perfiles...</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
